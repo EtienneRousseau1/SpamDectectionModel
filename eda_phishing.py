@@ -1,5 +1,17 @@
-# eda_phishing.py
+"""
+eda_phishing.py
 
+This script performs exploratory data analysis (EDA) on a phishing email dataset.
+The dataset contains various features extracted from emails, such as the number of words,
+unique words, links, and other characteristics. The goal is to understand the data distribution,
+identify patterns, and visualize relationships between features and the target label (safe vs phishing).
+
+Outputs:
+- Summary statistics and missing value analysis
+- Class distribution plot
+- Histograms and boxplots for numerical features
+- Correlation heatmap for numerical features and the target label
+"""
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
