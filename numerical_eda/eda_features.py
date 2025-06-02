@@ -40,8 +40,8 @@ print(f"Rows after outlier removal: {filtered_df.shape[0]}")
 df = filtered_df
 
 # Create a directory for plots if it doesn't exist
-if not os.path.exists('outputs/plots'):
-    os.makedirs('outputs/plots')
+if not os.path.exists('/charts'):
+    os.makedirs('/charts')
 
 # Feature distributions by class (boxplots, improved, specified features)
 n_features = len(selected_features)
