@@ -13,9 +13,15 @@ print(df['label'].value_counts())
 legitimate = df[df['label'] == 0]
 phishing = df[df['label'] == 1]
 
-# Randomly sample 2000 from each class
-legitimate_sampled = legitimate.sample(n=2000, random_state=42)
-phishing_sampled = phishing.sample(n=2000, random_state=42)
+print("Legitimate count:", len(legitimate))
+print("Phishing count:", len(phishing))
+
+# Determine the maximum possible balanced sample size
+max_sample = min(len(legitimate), len(phishing), 10000)
+print(f"Sampling {max_sample} from each class.")
+
+legitimate_sampled = legitimate.sample(n=max_sample, random_state=42)
+phishing_sampled = phishing.sample(n=max_sample, random_state=42)
 
 # Combine the sampled data
 balanced_df = pd.concat([legitimate_sampled, phishing_sampled])

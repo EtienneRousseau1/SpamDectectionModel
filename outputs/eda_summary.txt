@@ -1,36 +1,36 @@
 EDA Summary Report
 =================
 
-Rows before outlier removal: 3691
-Rows after outlier removal: 3691
-Dataset Shape: (3691, 9)
+Rows before outlier removal: 12754
+Rows after outlier removal: 12754
+Dataset Shape: (12754, 9)
 
 Class Distribution:
 label
-1    1856
-0    1835
+1    6398
+0    6356
 Name: count, dtype: int64
 
 Top 10 Most Important Features:
-num_email_addresses: 13.84
-num_urgent_keywords: 4.34
-num_unique_words: 2.89
-num_unique_domains: 1.98
-num_spelling_errors: 1.12
-num_stopwords: 0.67
-num_links: 0.43
-num_words: 0.29
+num_email_addresses: 27.28
+num_urgent_keywords: 8.15
+num_unique_words: 5.19
+num_spelling_errors: 4.09
+num_stopwords: 1.85
+num_words: 1.29
+num_unique_domains: 1.18
+num_links: 0.99
 
 
 Summary Statistics:
-         num_words  num_unique_words  ...  num_urgent_keywords        label
-count  3691.000000       3691.000000  ...          3691.000000  3691.000000
-mean    176.243024        101.496884  ...             0.230290     0.502845
-std     199.466366         86.858185  ...             0.498848     0.500060
-min       7.000000          7.000000  ...             0.000000     0.000000
-25%      52.000000         44.000000  ...             0.000000     0.000000
-50%     107.000000         75.000000  ...             0.000000     1.000000
-75%     215.000000        130.000000  ...             0.000000     1.000000
-max    1488.000000        577.000000  ...             2.000000     1.000000
+          num_words  num_unique_words  ...  num_urgent_keywords         label
+count  12754.000000      12754.000000  ...         12754.000000  12754.000000
+mean     175.287518        101.497569  ...             0.224008      0.501647
+std      193.974809         86.027058  ...             0.489761      0.500017
+min        7.000000          7.000000  ...             0.000000      0.000000
+25%       52.000000         43.000000  ...             0.000000      0.000000
+50%      107.000000         75.000000  ...             0.000000      1.000000
+75%      215.000000        130.000000  ...             0.000000      1.000000
+max     1417.000000        594.000000  ...             2.000000      1.000000
 
 [8 rows x 9 columns]
