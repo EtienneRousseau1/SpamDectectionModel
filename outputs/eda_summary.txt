@@ -1,0 +1,36 @@
+EDA Summary Report
+=================
+
+Rows before outlier removal: 3691
+Rows after outlier removal: 3691
+Dataset Shape: (3691, 9)
+
+Class Distribution:
+label
+1    1856
+0    1835
+Name: count, dtype: int64
+
+Top 10 Most Important Features:
+num_email_addresses: 13.84
+num_urgent_keywords: 4.34
+num_unique_words: 2.89
+num_unique_domains: 1.98
+num_spelling_errors: 1.12
+num_stopwords: 0.67
+num_links: 0.43
+num_words: 0.29
+
+
+Summary Statistics:
+         num_words  num_unique_words  ...  num_urgent_keywords        label
+count  3691.000000       3691.000000  ...          3691.000000  3691.000000
+mean    176.243024        101.496884  ...             0.230290     0.502845
+std     199.466366         86.858185  ...             0.498848     0.500060
+min       7.000000          7.000000  ...             0.000000     0.000000
+25%      52.000000         44.000000  ...             0.000000     0.000000
+50%     107.000000         75.000000  ...             0.000000     1.000000
+75%     215.000000        130.000000  ...             0.000000     1.000000
+max    1488.000000        577.000000  ...             2.000000     1.000000
+
+[8 rows x 9 columns]
