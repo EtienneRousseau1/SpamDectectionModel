@@ -31,3 +31,6 @@ Thumbs.db
 nlp_eda/.venv
 nlp_eda/balanced_dataset
 numerical_eda/.venv
+
+models/bert/.venv
+models/bert/nlp_dataset.csv
