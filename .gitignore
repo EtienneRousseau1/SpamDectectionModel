@@ -34,3 +34,5 @@ numerical_eda/.venv
 
 models/bert/.venv
 models/bert/nlp_dataset.csv
+models/bert/validation_dataset.csv
+models/bert/phishing_model
