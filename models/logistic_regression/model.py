@@ -320,18 +320,18 @@ def generate_results_markdown(metrics, best_params, timestamp):
     """Generate markdown file with model performance results."""
     content = f"""# Logistic Regression Model Performance Results
 
-## Timestamp
-{timestamp}
+    ## Timestamp
+    {timestamp}
 
-## Performance Metrics
-- Accuracy: {metrics['accuracy']:.3f}
-- ROC AUC: {metrics['roc_auc']:.3f}
-- Average Precision: {metrics['avg_precision']:.3f}
-- F1 Score: {metrics['f1_score']:.3f}
-- Mean CV F1 Score: {metrics['cv_scores'].mean():.3f} (±{metrics['cv_scores'].std() * 2:.3f})
+    ## Performance Metrics
+    - Accuracy: {metrics['accuracy']:.3f}
+    - ROC AUC: {metrics['roc_auc']:.3f}
+    - Average Precision: {metrics['avg_precision']:.3f}
+    - F1 Score: {metrics['f1_score']:.3f}
+    - Mean CV F1 Score: {metrics['cv_scores'].mean():.3f} (±{metrics['cv_scores'].std() * 2:.3f})
 
-## Best Model Parameters
-"""
+    ## Best Model Parameters
+    """
     
     for param, value in best_params.items():
         content += f"- {param}: {value}\n"
