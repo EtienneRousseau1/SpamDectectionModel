@@ -1,12 +1,22 @@
 import streamlit as st
 import torch
 from transformers import DistilBertTokenizerFast, DistilBertForSequenceClassification
+from pathlib import Path
+import gdown
 
+st.set_page_config(page_title="Email Phishing Detector", page_icon="✉️")
+
+# cache so we only ever download & load the model once
 @st.cache_resource
 def load_model():
-    model_path = "./phishing_model"
-    model = DistilBertForSequenceClassification.from_pretrained(model_path)
-    tokenizer = DistilBertTokenizerFast.from_pretrained(model_path)
+    model_dir = Path("phishing_model")
+    if not model_dir.exists():
+        # this will fetch the entire folder into ./phishing_model
+        # requires gdown>=4.6.0
+        folder_url = "https://drive.google.com/drive/folders/1amVI2SAofsG8UkKpe9u00lJFqe64ltAC?usp=share_link"
+        gdown.download_folder(folder_url, output=str(model_dir), quiet=False, use_cookies=False)
+    model = DistilBertForSequenceClassification.from_pretrained(str(model_dir))
+    tokenizer = DistilBertTokenizerFast.from_pretrained(str(model_dir))
     model.eval()
     return model, tokenizer
 
@@ -32,7 +42,6 @@ def predict_phishing(email_text: str, model, tokenizer):
     }
 
 def main():
-    st.set_page_config(page_title="Email Phishing Detector", page_icon="✉️")
     st.title("📧 Email Phishing Detector")
     st.markdown(
         """
@@ -41,7 +50,7 @@ def main():
         """
     )
 
-    with st.spinner("Loading model..."):
+    with st.spinner("Loading model…"):
         model, tokenizer = load_model()
     st.success("Model loaded!")
 
@@ -51,7 +60,7 @@ def main():
         if not email_input.strip():
             st.warning("⚠️ Please paste some email text before clicking Predict.")
         else:
-            with st.spinner("Running inference..."):
+            with st.spinner("Running inference…"):
                 result = predict_phishing(email_input, model, tokenizer)
             label = result["prediction"]
             conf_pct = result["confidence"] * 100
