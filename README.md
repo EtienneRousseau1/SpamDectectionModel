@@ -10,11 +10,11 @@ Datasets Used:
 
 Repo Organization:
 - `\comparison_charts` - comparison metrics for the Random Forest, NLP, and XGBoost models.
-- `demo` - Streamlit app to run the NLP model.
-- `models` - source code, results, and charts for all model trainings and evaluations.
-- `nlp_eda` - exploratory data analysis (EDA) for the text dataset.
-- `numerical_eda` - exploratory data analysis (EDA) for the numerical dataset.
-- `numerical_eda` - exploratory data analysis (EDA) for the numerical dataset.
+- `\demo` - Streamlit app to run the NLP model.
+- `\models` - source code, results, and charts for all model trainings and evaluations.
+- `\nlp_eda` - exploratory data analysis (EDA) for the text dataset.
+- `\numerical_eda` - exploratory data analysis (EDA) for the numerical dataset.
+- `\numerical_eda` - exploratory data analysis (EDA) for the numerical dataset.
 
 Running our Demo:
 
