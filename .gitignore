@@ -39,5 +39,5 @@ models/bert/validation_dataset.csv
 models/bert/phishing_model
 models/bert/bert_checkpoints
 
-streamlit/.venv
-streamlit/phishing_model
+demo/.venv
+demo/phishing_model
