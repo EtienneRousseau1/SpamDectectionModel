@@ -18,21 +18,26 @@ Repo Organization:
 
 Running our Demo:
 
-In order to run our demo, follow these steps:
+Our demo is built owithn Streamlit and available [here](https://email-phishing-detection.streamlit.app/). To run it locally, follow the steps below:
 
-1. Create and activate a virtual environment  
+1. Navigate into the `\demo` directory
    ```bash
    cd demo
+   ```
+
+2. Create and activate a virtual environment  
+   ```bash
    python3 -m venv .venv
    source .venv/bin/activate
    ```
 
-2. Install dependencies  
+3. Install the dependencies  
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Run the Streamlit app  
+4. Run the Streamlit app  
    ```bash
    streamlit run app.py
    ```
+Then, open your browser and go to http://localhost:8501 to interact with the demo.
