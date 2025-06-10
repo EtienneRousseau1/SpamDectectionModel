@@ -18,7 +18,7 @@ Repo Organization:
 
 Running our Demo:
 
-Our demo is built owithn Streamlit and available [here](https://email-phishing-detection.streamlit.app/). To run it locally, follow the steps below:
+Our demo is built with Streamlit and available [here](https://email-phishing-detection.streamlit.app/). To run it locally, follow the steps below:
 
 1. Navigate into the `\demo` directory
    ```bash
